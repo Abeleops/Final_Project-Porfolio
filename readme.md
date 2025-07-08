@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Abeleops/">
-    <img src="./" alt="AbeleOps Logo" width="130" height="100">
+    <img src="./assets/img/AbeleOps.png" alt="AbeleOps Logo" width="130" height="100">
   </a>
 
   <h3 align="center">Final_Project-Portfolio</h3>
@@ -18,7 +18,6 @@
 </div>
 <br />
 
-![](https://visit-counter.vercel.app/counter.png?page=AbeleOps/AWD-WD-HERO-SECTION)
 
 
 [![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8)
