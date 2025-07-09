@@ -148,6 +148,13 @@ main {
     backdrop-filter: blur(10px);
     border: 3px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
+    .main_picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
 }
 
 .image-placeholder:hover {
@@ -170,6 +177,19 @@ main {
 }
 
 .image-placeholder:hover .profile-image {
+    transform: scale(1.1);
+}
+
+/* Home Picture Styles */
+.home_picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.image-placeholder:hover .home_picture {
     transform: scale(1.1);
 }
 
