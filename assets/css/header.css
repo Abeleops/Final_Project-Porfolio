@@ -41,6 +41,17 @@
     letter-spacing: -0.5px;
 }
 
+.logo-image {
+    height: 5rem;
+    width: auto;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.1);
+}
+
 /* Navigation Menu */
 .nav-menu {
     display: flex;
