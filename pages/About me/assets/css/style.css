@@ -2,8 +2,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: #f8f9fa;
+    color: #e0e0e0;
+    background: #1a1a1a;
 }
 
 main {
@@ -19,7 +19,7 @@ main {
 /* About Hero Section */
 .about-hero {
     padding: 100px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
     color: white;
     position: relative;
     overflow: hidden;
@@ -62,7 +62,7 @@ main {
 }
 
 .highlight {
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    background: linear-gradient(45deg, #666666, #999999);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -112,7 +112,7 @@ main {
 /* About Details Section */
 .about-details {
     padding: 100px 0;
-    background: white;
+    background: #2a2a2a;
 }
 
 .details-grid {
@@ -122,12 +122,12 @@ main {
 }
 
 .detail-card {
-    background: white;
+    background: #333333;
     padding: 40px 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -139,7 +139,7 @@ main {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4a4a4a 0%, #666666 100%);
     transition: left 0.3s ease;
     z-index: 0;
 }
@@ -168,7 +168,7 @@ main {
 
 .card-header i {
     font-size: 2rem;
-    color: #667eea;
+    color: #999999;
     transition: color 0.3s ease;
 }
 
@@ -179,7 +179,7 @@ main {
 .card-header h3 {
     font-size: 1.5rem;
     margin: 0;
-    color: #2c3e50;
+    color: #e0e0e0;
     transition: color 0.3s ease;
 }
 
@@ -200,14 +200,14 @@ main {
 /* Skills Section */
 .skills-section {
     padding: 100px 0;
-    background: #f8f9fa;
+    background: #1a1a1a;
 }
 
 .skills-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
-    color: #2c3e50;
+    color: #e0e0e0;
     position: relative;
 }
 
@@ -219,7 +219,7 @@ main {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #666666 0%, #999999 100%);
     border-radius: 2px;
 }
 
@@ -230,22 +230,22 @@ main {
 }
 
 .skill-category {
-    background: white;
+    background: #333333;
     padding: 40px 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
 .skill-category:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 .skill-category h3 {
     font-size: 1.5rem;
     margin-bottom: 25px;
-    color: #2c3e50;
+    color: #e0e0e0;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -289,14 +289,14 @@ main {
 /* Personal Section */
 .personal-section {
     padding: 100px 0;
-    background: white;
+    background: #2a2a2a;
 }
 
 .personal-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
-    color: #2c3e50;
+    color: #e0e0e0;
     position: relative;
 }
 
@@ -308,7 +308,7 @@ main {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #666666 0%, #999999 100%);
     border-radius: 2px;
 }
 
@@ -322,12 +322,12 @@ main {
     line-height: 1.8;
     margin-bottom: 30px;
     text-align: justify;
-    color: #555;
+    color: #e0e0e0;
 }
 
 /* Footer Styles */
 .footer {
-    background: #2c3e50;
+    background: #1a1a1a;
     color: white;
     padding: 60px 0 20px;
     margin-top: 50px;
@@ -366,7 +366,7 @@ main {
 }
 
 .footer-links a:hover {
-    color: #3498db;
+    color: #999999;
 }
 
 .footer-social {
@@ -375,21 +375,22 @@ main {
 }
 
 .footer-social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    display: inline-block;
     text-decoration: none;
-    border-radius: 50%;
     transition: all 0.3s ease;
 }
 
-.footer-social a:hover {
-    background: #3498db;
-    transform: translateY(-3px);
+.footer-social a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    filter: brightness(1) contrast(1);
+}
+
+.footer-social a:hover img {
+    transform: translateY(-3px) scale(1.1);
+    filter: brightness(1.2) contrast(1.1);
 }
 
 .footer-bottom {
