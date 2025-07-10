@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information - Portfolio</title>
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../../assets/img/AbeleOps.png" alt="Portfolio Logo" class="logo-image">
+            </div>
+            <nav class="nav-menu">
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="../About me/index.html" class="nav-link">About Me</a>
+                <a href="../Education/index.html" class="nav-link">Education</a>
+                <a href="../Past Orgs/index.html" class="nav-link">Past Orgs</a>
+                <a href="../Projects/index.html" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link active">Contact Information</a>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact" class="contact-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Get In Touch</h1>
+                    <h2>Let's <span class="highlight">Connect</span> and <span class="highlight">Collaborate</span></h2>
+                    <p class="hero-description">
+                        I'm always interested in new opportunities, collaborations, and conversations about 
+                        technology and innovative projects. Feel free to reach out!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Information Template -->
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>your.email@example.com</p>
+                                    <a href="mailto:your.email@example.com" class="contact-link">Send Email</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>LinkedIn</h4>
+                                    <p>Connect with me professionally</p>
+                                    <a href="#" target="_blank" class="contact-link">View Profile</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>GitHub</h4>
+                                    <p>Check out my code and projects</p>
+                                    <a href="#" target="_blank" class="contact-link">View Repository</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Location</h4>
+                                    <p>Your City, State</p>
+                                    <p class="location-note">Open to remote opportunities</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="availability">
+                            <h4>Current Availability</h4>
+                            <div class="availability-status">
+                                <div class="status-indicator available"></div>
+                                <span>Available for opportunities</span>
+                            </div>
+                            <p class="availability-note">
+                                Currently seeking opportunities in your field of interest.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Template -->
+                    <div class="contact-form-container">
+                        <h3>Send Me a Message</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company/Organization (Optional)</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="opportunity">Opportunity</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Your message here..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+
+                        <div class="form-note">
+                            <p><strong>Response Time:</strong> I typically respond within 24-48 hours.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template sections can be added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Your Name</h3>
+                    <p>Your Professional Title</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../About me/index.html">About</a>
+                    <a href="../Education/index.html">Education</a>
+                    <a href="../Projects/index.html">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" title="LinkedIn"><img src="../../assets/img/LinkedIn.png" alt="LinkedIn"></a>
+                    <a href="#" title="GitHub"><img src="../../assets/img/GitHub.png" alt="GitHub"></a>
+                    <a href="#" title="Facebook"><img src="../../assets/img/facebook.png" alt="Facebook"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
