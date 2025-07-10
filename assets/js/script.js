@@ -119,7 +119,7 @@ window.addEventListener('scroll', function() {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
     if (hero) {
-        const rate = scrolled * -0.5;
+        const rate = scrolled * 0;
         hero.style.transform = `translateY(${rate}px)`;
     }
 });
