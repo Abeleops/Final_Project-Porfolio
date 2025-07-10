@@ -140,10 +140,15 @@ main {
 }
 
 .scroll-container {
-    display: flex;
+    position: relative;
+    width: 100%;
+    height: 400px;
     overflow-x: auto;
-    gap: 1.5rem;
+    overflow-y: hidden;
     padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
@@ -166,18 +171,53 @@ main {
     background: linear-gradient(135deg, #777777 0%, #aaaaaa 100%);
 }
 
+.cards-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: auto;
+    gap: 1.5rem;
+    padding: 0 20px;
+}
+
+.slideshow-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: linear-gradient(135deg, #666666 0%, #999999 100%);
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
 .card {
     flex: 0 0 auto;
     min-width: 320px;
+    max-width: 320px;
     background: #333333;
     border-radius: 20px;
     padding: 30px;
-    scroll-snap-align: start;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    height: 350px;
+    scroll-snap-align: start;
 }
 
 .card::before {
@@ -398,13 +438,6 @@ main {
     margin: 0;
 }
 
-/* Card stagger animation */
-.card:nth-child(1) { animation: fadeInUp 0.6s ease 0.5s both; }
-.card:nth-child(2) { animation: fadeInUp 0.6s ease 0.7s both; }
-.card:nth-child(3) { animation: fadeInUp 0.6s ease 0.9s both; }
-.card:nth-child(4) { animation: fadeInUp 0.6s ease 1.1s both; }
-.card:nth-child(5) { animation: fadeInUp 0.6s ease 1.3s both; }
-
 /* Smooth scroll behavior for horizontal containers */
 html {
     scroll-behavior: smooth;
@@ -484,9 +517,22 @@ a, button, .card, .image-container, .personal-content {
         font-size: 2rem;
     }
 
+    .scroll-container {
+        height: 380px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .cards-wrapper {
+        width: auto;
+        padding: 0 15px;
+    }
+
     .card {
         min-width: 280px;
+        max-width: 280px;
         padding: 25px 20px;
+        height: 330px;
     }
 
     .card h3 {
@@ -523,8 +569,14 @@ a, button, .card, .image-container, .personal-content {
         font-size: 3rem;
     }
     
+    .cards-wrapper {
+        width: auto;
+        padding: 0 15px;
+    }
+    
     .card {
         min-width: 300px;
+        max-width: 300px;
     }
 }
 
@@ -550,9 +602,22 @@ a, button, .card, .image-container, .personal-content {
         font-size: 1.8rem;
     }
 
+    .scroll-container {
+        height: 360px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .cards-wrapper {
+        width: auto;
+        padding: 0 10px;
+    }
+
     .card {
         min-width: 250px;
+        max-width: 250px;
         padding: 20px 15px;
+        height: 310px;
     }
 
     .card h3 {
