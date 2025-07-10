@@ -4,6 +4,8 @@ body {
     line-height: 1.6;
     color: #e0e0e0;
     background: #1a1a1a;
+    margin: 0;
+    padding: 0;
 }
 
 main {
@@ -122,6 +124,7 @@ main {
     position: relative;
     border-bottom: 2px solid #555;
     padding-bottom: 20px;
+    animation: fadeInUp 0.8s ease 0.3s both;
 }
 
 .section-title::after {
@@ -277,6 +280,7 @@ main {
     margin-bottom: 60px;
     color: #e0e0e0;
     position: relative;
+    animation: fadeInUp 0.8s ease 0.3s both;
 }
 
 .personal-section h2::after {
@@ -298,6 +302,12 @@ main {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.personal-content:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 .personal-content p {
@@ -385,9 +395,42 @@ main {
 .footer-bottom p {
     opacity: 0.7;
     font-size: 0.9rem;
+    margin: 0;
 }
 
+/* Card stagger animation */
+.card:nth-child(1) { animation: fadeInUp 0.6s ease 0.5s both; }
+.card:nth-child(2) { animation: fadeInUp 0.6s ease 0.7s both; }
+.card:nth-child(3) { animation: fadeInUp 0.6s ease 0.9s both; }
+.card:nth-child(4) { animation: fadeInUp 0.6s ease 1.1s both; }
+.card:nth-child(5) { animation: fadeInUp 0.6s ease 1.3s both; }
 
+/* Smooth scroll behavior for horizontal containers */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+.card:focus-within {
+    outline: 2px solid #999999;
+    outline-offset: 2px;
+}
+
+.footer-links a:focus,
+.footer-social a:focus {
+    outline: 2px solid #999999;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    box-sizing: border-box;
+}
+
+a, button, .card, .image-container, .personal-content {
+    transition: all 0.3s ease;
+}
 
 /* Animations */
 @keyframes fadeInUp {
@@ -469,7 +512,20 @@ main {
     .footer-social {
         justify-content: center;
     }
+}
 
+@media screen and (max-width: 1024px) {
+    .about-content {
+        gap: 50px;
+    }
+    
+    .about-text h1 {
+        font-size: 3rem;
+    }
+    
+    .card {
+        min-width: 300px;
+    }
 }
 
 @media screen and (max-width: 480px) {
