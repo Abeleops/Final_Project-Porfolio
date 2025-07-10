@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transition = 'opacity 5s ease, transform 5s ease';
         observer.observe(el);
     });
 });
