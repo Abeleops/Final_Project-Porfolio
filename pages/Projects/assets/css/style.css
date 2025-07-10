@@ -336,10 +336,6 @@ main {
         gap: 20px;
     }
 
-    .project-card {
-        margin: 0 10px;
-    }
-
     .filter-tabs {
         gap: 8px;
     }
@@ -402,17 +398,4 @@ main {
         height: 40px;
         font-size: 1rem;
     }
-}
-
-/* Filter Animation */
-.project-card.hidden {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: all 0.3s ease;
-}
-
-.project-card.visible {
-    opacity: 1;
-    transform: scale(1);
-    transition: all 0.3s ease;
 }
