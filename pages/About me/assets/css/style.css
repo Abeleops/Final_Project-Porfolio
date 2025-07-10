@@ -116,8 +116,9 @@ main {
 
 .details-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    margin-top: 40px;
 }
 
 .detail-card {
@@ -198,6 +199,39 @@ main {
     opacity: 1;
 }
 
+/* Info list styling for personal information card */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding-left: 25px;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #999999;
+    font-weight: bold;
+}
+
+.detail-card:hover .info-list li {
+    color: rgba(255, 255, 255, 0.95);
+}
+
 /* Skills Section */
 .skills-section {
     padding: 100px 0;
@@ -226,8 +260,9 @@ main {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .skill-category {
@@ -316,14 +351,18 @@ main {
 }
 
 .personal-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .personal-content p {
     font-size: 1.2rem;
     line-height: 1.8;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-align: justify;
     color: #e0e0e0;
 }
@@ -407,6 +446,8 @@ main {
     font-size: 0.9rem;
 }
 
+
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -486,6 +527,7 @@ main {
     .footer-social {
         justify-content: center;
     }
+
 }
 
 @media screen and (max-width: 480px) {
