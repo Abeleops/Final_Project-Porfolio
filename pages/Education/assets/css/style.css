@@ -245,28 +245,28 @@ main {
     padding: 8px 0;
     padding-left: 25px;
     position: relative;
-    color: #555;
+    color: #cccccc;
 }
 
 .timeline-details li::before {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #667eea;
+    color: #999999;
     font-weight: bold;
 }
 
 /* Coursework Section */
 .coursework-section {
     padding: 100px 0;
-    background: #f8f9fa;
+    background: #1a1a1a;
 }
 
 .coursework-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
-    color: #2c3e50;
+    color: #e0e0e0;
     position: relative;
 }
 
@@ -278,7 +278,7 @@ main {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #666666 0%, #999999 100%);
     border-radius: 2px;
 }
 
@@ -289,20 +289,21 @@ main {
 }
 
 .course-category {
-    background: white;
+    background: #333333;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .course-category:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 .category-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4a4a4a 0%, #666666 100%);
     color: white;
     padding: 30px;
     text-align: center;
@@ -340,13 +341,13 @@ main {
 
 .course-item h4 {
     font-size: 1.2rem;
-    color: #2c3e50;
+    color: #e0e0e0;
     margin-bottom: 8px;
     font-weight: 600;
 }
 
 .course-item p {
-    color: #666;
+    color: #cccccc;
     line-height: 1.6;
     margin: 0;
 }
@@ -354,14 +355,14 @@ main {
 /* Certifications Section */
 .certifications-section {
     padding: 100px 0;
-    background: white;
+    background: #2a2a2a;
 }
 
 .certifications-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
-    color: #2c3e50;
+    color: #e0e0e0;
     position: relative;
 }
 
@@ -373,7 +374,7 @@ main {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #666666 0%, #999999 100%);
     border-radius: 2px;
 }
 
@@ -384,16 +385,16 @@ main {
 }
 
 .cert-category {
-    background: white;
+    background: #333333;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cert-category h3 {
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: #e0e0e0;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -401,7 +402,7 @@ main {
 }
 
 .cert-category h3 i {
-    color: #667eea;
+    color: #999999;
     font-size: 2rem;
 }
 
@@ -410,7 +411,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cert-item:last-child {
@@ -419,13 +420,13 @@ main {
 
 .cert-info h4 {
     font-size: 1.3rem;
-    color: #2c3e50;
+    color: #e0e0e0;
     margin-bottom: 5px;
     font-weight: 600;
 }
 
 .cert-info p {
-    color: #666;
+    color: #cccccc;
     margin: 0;
     line-height: 1.5;
 }
@@ -439,13 +440,13 @@ main {
 }
 
 .cert-status.planned {
-    background: #ffeaa7;
-    color: #e17055;
+    background: #4a4a4a;
+    color: #ffcc88;
 }
 
 .cert-status.future {
-    background: #e8f4ff;
-    color: #667eea;
+    background: #333333;
+    color: #88ccff;
 }
 
 .learning-areas {
@@ -459,38 +460,38 @@ main {
     gap: 20px;
     align-items: flex-start;
     padding: 20px;
-    background: #f8f9fa;
+    background: #404040;
     border-radius: 15px;
     transition: all 0.3s ease;
 }
 
 .learning-item:hover {
-    background: #e8f4ff;
+    background: #4a4a4a;
     transform: translateX(10px);
 }
 
 .learning-item i {
     font-size: 2rem;
-    color: #667eea;
+    color: #999999;
     margin-top: 5px;
 }
 
 .learning-item h4 {
     font-size: 1.2rem;
-    color: #2c3e50;
+    color: #e0e0e0;
     margin-bottom: 8px;
     font-weight: 600;
 }
 
 .learning-item p {
-    color: #666;
+    color: #cccccc;
     line-height: 1.6;
     margin: 0;
 }
 
 /* Footer Styles */
 .footer {
-    background: #2c3e50;
+    background: #1a1a1a;
     color: white;
     padding: 60px 0 20px;
     margin-top: 50px;
@@ -529,7 +530,7 @@ main {
 }
 
 .footer-links a:hover {
-    color: #3498db;
+    color: #999999;
 }
 
 .footer-social {
@@ -550,8 +551,17 @@ main {
     transition: all 0.3s ease;
 }
 
+.footer-social a img {
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover img {
+    filter: brightness(0.8) invert(0.8);
+}
+
 .footer-social a:hover {
-    background: #3498db;
+    background: #666666;
     transform: translateY(-3px);
 }
 
