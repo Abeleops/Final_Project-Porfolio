@@ -108,31 +108,76 @@ main {
     transform: scale(1.1);
 }
 
-/* About Details Section */
+/* About Details Section - Horizontal Scroll */
 .about-details {
     padding: 100px 0;
     background: #2a2a2a;
 }
 
-.details-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
-    margin-top: 40px;
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #e0e0e0;
+    position: relative;
+    border-bottom: 2px solid #555;
+    padding-bottom: 20px;
 }
 
-.detail-card {
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #666666 0%, #999999 100%);
+    border-radius: 2px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #666666 0%, #999999 100%);
+    border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #777777 0%, #aaaaaa 100%);
+}
+
+.card {
+    flex: 0 0 auto;
+    min-width: 320px;
     background: #333333;
-    padding: 40px 30px;
     border-radius: 20px;
+    padding: 30px;
+    scroll-snap-align: start;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-.detail-card::before {
+.card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -144,69 +189,53 @@ main {
     z-index: 0;
 }
 
-.detail-card:hover::before {
+.card:hover::before {
     left: 0;
 }
 
-.detail-card:hover {
+.card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    color: white;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
-.detail-card > * {
+.card > * {
     position: relative;
     z-index: 1;
 }
 
-.card-header {
+.card h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 10px;
+    transition: color 0.3s ease;
 }
 
-.card-header i {
-    font-size: 2rem;
+.card:hover h3 {
+    color: white;
+}
+
+.card h3 i {
     color: #999999;
-    transition: color 0.3s ease;
-}
-
-.detail-card:hover .card-header i {
-    color: white;
-}
-
-.card-header h3 {
     font-size: 1.5rem;
-    margin: 0;
-    color: #e0e0e0;
-    transition: color 0.3s ease;
 }
 
-.detail-card:hover .card-header h3 {
+.card:hover h3 i {
     color: white;
 }
 
-.detail-card p {
-    line-height: 1.8;
-    color: #e0e0e0;
-    opacity: 0.9;
-    transition: color 0.3s ease;
-}
-
-.detail-card:hover p {
-    color: rgba(255, 255, 255, 0.95);
-    opacity: 1;
-}
-
-/* Info list styling for personal information card */
-.info-list {
+.card ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.info-list li {
+.card ul li {
     padding: 12px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
@@ -216,112 +245,24 @@ main {
     font-size: 1rem;
 }
 
-.info-list li:last-child {
+.card ul li:last-child {
     border-bottom: none;
 }
 
-.info-list li::before {
-    content: '▸';
+.card ul li::before {
+    content: '➤';
     position: absolute;
     left: 0;
     color: #999999;
     font-weight: bold;
 }
 
-.detail-card:hover .info-list li {
+.card:hover ul li {
     color: rgba(255, 255, 255, 0.95);
 }
 
-/* Skills Section */
-.skills-section {
-    padding: 100px 0;
-    background: #1a1a1a;
-}
-
-.skills-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: #e0e0e0;
-    position: relative;
-}
-
-.skills-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(135deg, #666666 0%, #999999 100%);
-    border-radius: 2px;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.skill-category {
-    background: #333333;
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.skill-category:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-    background: #404040;
-}
-
-.skill-category h3 {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.skill-category h3 i {
-    color: #999999;
-    font-size: 1.8rem;
-}
-
-.skill-category ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skill-category li {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    padding-left: 25px;
-    color: #e0e0e0;
-    transition: color 0.3s ease;
-}
-
-.skill-category li:last-child {
-    border-bottom: none;
-}
-
-.skill-category li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: #999999;
-    font-weight: bold;
-}
-
-.skill-category:hover li {
-    color: #ffffff;
+.card:hover ul li::before {
+    color: #cccccc;
 }
 
 /* Personal Section */
@@ -496,18 +437,19 @@ main {
         height: 250px;
     }
 
-    .details-grid,
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .section-title {
+        font-size: 2rem;
     }
 
-    .detail-card,
-    .skill-category {
-        padding: 30px 20px;
+    .card {
+        min-width: 280px;
+        padding: 25px 20px;
     }
 
-    .skills-section h2,
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
     .personal-section h2 {
         font-size: 2rem;
     }
@@ -546,6 +488,19 @@ main {
 
     .container {
         padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        min-width: 250px;
+        padding: 20px 15px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
     }
 
     .personal-content p {
