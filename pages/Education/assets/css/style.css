@@ -671,7 +671,7 @@ main {
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.1);
     background: #1a1a1a;
-    height: 400px;
+    height: 300px;
     margin-top: 20px;
     position: relative;
     transition: all 0.3s ease;
@@ -681,18 +681,66 @@ main {
 .cert-preview:hover {
     border-color: rgba(40, 167, 69, 0.4);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
-.cert-preview iframe {
-    border-radius: 8px;
+.cert-image-container {
+    position: relative;
     width: 100%;
     height: 100%;
-    min-height: 400px;
+    overflow: hidden;
+}
+
+.cert-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
+.cert-preview:hover .cert-image {
+    transform: scale(1.05);
+}
+
+.cert-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cert-preview:hover .cert-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-align: center;
+}
+
+.overlay-content i {
+    font-size: 2rem;
+    color: #28a745;
+}
+
+.overlay-content span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 .cert-preview::after {
-    content: '🔍 Click to view full size';
+    content: '🔍 Click to view full certificate';
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -947,12 +995,34 @@ main {
     }
 
     .cert-preview {
-        height: 350px;
+        height: 180px;
     }
 
-    .cert-preview iframe {
-        height: 350px;
-        min-height: 350px;
+    .pdf-placeholder {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .pdf-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        align-self: center;
+    }
+
+    .pdf-info h4 {
+        font-size: 1.2rem;
+    }
+
+    .pdf-meta {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .view-indicator {
+        align-self: center;
     }
 }
 
@@ -986,11 +1056,39 @@ main {
     }
 
     .cert-preview {
-        height: 300px;
+        height: 160px;
     }
 
-    .cert-preview iframe {
-        height: 300px;
-        min-height: 300px;
+    .pdf-placeholder {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .pdf-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+
+    .pdf-info h4 {
+        font-size: 1.1rem;
+    }
+
+    .pdf-info p {
+        font-size: 0.9rem;
+    }
+
+    .pdf-meta {
+        gap: 10px;
+    }
+
+    .pdf-meta span {
+        font-size: 0.8rem;
+    }
+
+    .view-indicator {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 }
