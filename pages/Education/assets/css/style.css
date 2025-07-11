@@ -30,6 +30,13 @@ main {
     position: relative;
 }
 
+.highlight2 {
+    background: linear-gradient(45deg, #ffd000, rgba(238, 255, 0, 0.616));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
 .education-timeline h2::after {
     content: '';
     position: absolute;
