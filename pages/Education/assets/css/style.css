@@ -658,6 +658,7 @@ main {
 .footer-social {
     display: flex;
     gap: 15px;
+    
 }
 
 .footer-social a {
