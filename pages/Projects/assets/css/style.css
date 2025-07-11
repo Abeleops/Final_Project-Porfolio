@@ -151,9 +151,48 @@ main {
 
 .project-image {
     position: relative;
-    height: 200px;
+    height: 250px;
     background: linear-gradient(135deg, #333333 0%, #444444 100%);
     overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.project-preview {
+    width: 125%;
+    height: 125%;
+    border: none;
+    transform: scale(1);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project-card:hover .project-preview {
+    transform: scale(1.02);
+}
+
+.preview-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(100, 255, 218, 0.9);
+    color: #1a1a1a;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.preview-indicator i {
+    font-size: 0.7rem;
 }
 
 .project-placeholder {
@@ -165,6 +204,12 @@ main {
     color: #999999;
     font-size: 1.1rem;
     font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #333333 0%, #444444 100%);
 }
 
 .project-placeholder i {
@@ -179,12 +224,13 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    backdrop-filter: blur(2px);
 }
 
 .project-card:hover .project-overlay {
@@ -196,6 +242,7 @@ main {
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    z-index: 10;
 }
 
 .project-content {
