@@ -42,11 +42,11 @@ main {
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 30px;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1200rem;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10rem;
     position: relative;
     z-index: 1;
 }
