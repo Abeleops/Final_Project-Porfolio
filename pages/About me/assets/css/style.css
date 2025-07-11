@@ -488,143 +488,312 @@ a, button, .card, .image-container, .personal-content {
     }
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-
-    .about-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .about-text h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-intro {
-        font-size: 1.1rem;
-    }
-
-    .image-container {
-        width: 250px;
-        height: 250px;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .scroll-container {
-        height: 380px;
-        overflow-x: auto;
-        overflow-y: hidden;
-    }
-
-    .cards-wrapper {
-        width: auto;
-        padding: 0 15px;
-    }
-
-    .card {
-        min-width: 280px;
-        max-width: 280px;
-        padding: 25px 20px;
-        height: 330px;
-    }
-
-    .card h3 {
-        font-size: 1.3rem;
-    }
-
-    .personal-section h2 {
-        font-size: 2rem;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .footer-links {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
+/* Past Organizations Section */
+.orgs-hero {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+    position: relative;
+    overflow: hidden;
 }
 
-@media screen and (max-width: 1024px) {
-    .about-content {
-        gap: 50px;
+.orgs-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="rgba(153,153,153,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    opacity: 0.3;
+}
+
+.orgs-hero .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 40px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+/* Left Column - Student Organizations */
+.hero-left {
+    background: rgba(51, 51, 51, 0.7);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 102, 102, 0.1) 0%, rgba(153, 153, 153, 0.1) 100%);
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.hero-left:hover::before {
+    left: 0;
+}
+
+.hero-left:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border-color: rgba(153, 153, 153, 0.3);
+}
+
+.hero-left > * {
+    position: relative;
+    z-index: 1;
+}
+
+.section-image {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.org-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(153, 153, 153, 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-left:hover .org-image {
+    transform: scale(1.1);
+    border-color: rgba(153, 153, 153, 0.6);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-left h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(153, 153, 153, 0.3);
+    padding-bottom: 10px;
+}
+
+.org-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.org-list li {
+    padding: 12px 0;
+    color: #d0d0d0;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.org-list li:last-child {
+    border-bottom: none;
+}
+
+.org-list li::before {
+    content: '🏛️';
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+.hero-left:hover .org-list li {
+    color: #f0f0f0;
+    transform: translateX(5px);
+}
+
+/* Middle Column - Main Content */
+.hero-middle {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-middle h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease;
+}
+
+.hero-middle h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #d0d0d0;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #c0c0c0;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: justify;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+/* Right Column - Leadership Roles */
+.hero-right {
+    background: rgba(51, 51, 51, 0.7);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 102, 102, 0.1) 0%, rgba(153, 153, 153, 0.1) 100%);
+    transition: right 0.4s ease;
+    z-index: 0;
+}
+
+.hero-right:hover::before {
+    right: 0;
+}
+
+.hero-right:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border-color: rgba(153, 153, 153, 0.3);
+}
+
+.hero-right > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-right h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(153, 153, 153, 0.3);
+    padding-bottom: 10px;
+}
+
+.role-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.role-list li {
+    padding: 12px 0;
+    color: #d0d0d0;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.role-list li:last-child {
+    border-bottom: none;
+}
+
+.role-list li::before {
+    content: '👑';
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+.hero-right:hover .role-list li {
+    color: #f0f0f0;
+    transform: translateX(-5px);
+}
+
+/* Responsive Design for Organizations Section */
+@media screen and (max-width: 768px) {
+    .orgs-hero .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
     
-    .about-text h1 {
-        font-size: 3rem;
+    .hero-middle h1 {
+        font-size: 2.5rem;
     }
     
-    .cards-wrapper {
-        width: auto;
-        padding: 0 15px;
+    .hero-middle h2 {
+        font-size: 1.5rem;
     }
     
-    .card {
-        min-width: 300px;
-        max-width: 300px;
+    .hero-left,
+    .hero-right {
+        padding: 25px 20px;
+    }
+    
+    .org-image {
+        width: 100px;
+        height: 100px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .about-text h1 {
+    .orgs-hero {
+        padding: 60px 0;
+    }
+    
+    .hero-middle h1 {
         font-size: 2rem;
     }
-
-    .about-text h2 {
+    
+    .hero-middle h2 {
         font-size: 1.3rem;
     }
-
-    .image-container {
-        width: 200px;
-        height: 200px;
+    
+    .hero-description {
+        font-size: 1rem;
+        text-align: center;
     }
-
-    .container {
-        padding: 0 15px;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .scroll-container {
-        height: 360px;
-        overflow-x: auto;
-        overflow-y: hidden;
-    }
-
-    .cards-wrapper {
-        width: auto;
-        padding: 0 10px;
-    }
-
-    .card {
-        min-width: 250px;
-        max-width: 250px;
+    
+    .hero-left,
+    .hero-right {
         padding: 20px 15px;
-        height: 310px;
     }
-
-    .card h3 {
+    
+    .org-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .hero-left h3,
+    .hero-right h3 {
         font-size: 1.2rem;
     }
-
-    .personal-content p {
-        font-size: 1.1rem;
+    
+    .org-list li,
+    .role-list li {
+        font-size: 0.9rem;
+        padding: 10px 0 10px 20px;
     }
 }
