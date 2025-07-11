@@ -18,6 +18,13 @@ main {
     margin: 0 auto;
     padding: 0 20px;
 }
+.highlight {
+    background: linear-gradient(45deg, #00c3ff, #00e1ff73);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
 
 /* Hero Section */
 .projects-hero {
