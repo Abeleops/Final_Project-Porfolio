@@ -31,7 +31,7 @@ main {
 }
 
 .highlight2 {
-    background: linear-gradient(45deg, #ffd000, rgba(238, 255, 0, 0.616));
+    background: linear-gradient(45deg, #ffd000, rgba(238, 255, 0, 0.349));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
