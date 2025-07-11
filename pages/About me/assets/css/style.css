@@ -70,6 +70,14 @@ main {
     font-weight: 700;
 }
 
+.highlight2 {
+    background: linear-gradient(45deg, #ffd000, rgba(238, 255, 0, 0.616));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
 .about-intro {
     font-size: 1.2rem;
     line-height: 1.8;
