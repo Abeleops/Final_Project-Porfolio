@@ -12,24 +12,17 @@ function showSlide(index) {
     
     if (!scrollContainer || !dots.length) return;
     
-    // Calculate card width and gap based on screen size
+    // Simple card width calculation
     let cardWidth = 320;
     let gap = 24;
-    let padding = 40; // Account for wrapper padding
     
-    if (window.innerWidth <= 480) {
-        cardWidth = 250;
-        padding = 20;
-    } else if (window.innerWidth <= 768) {
+    // Adjust for mobile screens
+    if (window.innerWidth <= 768) {
         cardWidth = 280;
-        padding = 30;
-    } else if (window.innerWidth <= 1024) {
-        cardWidth = 300;
-        padding = 30;
     }
     
     // Scroll to the selected card
-    const scrollPosition = (index * (cardWidth + gap)) + (index > 0 ? padding : 0);
+    const scrollPosition = index * (cardWidth + gap);
     scrollContainer.scrollTo({
         left: scrollPosition,
         behavior: 'smooth'
