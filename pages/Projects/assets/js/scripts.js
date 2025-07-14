@@ -144,4 +144,71 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
+
+    // Page preview functionality
+    const pageItems = document.querySelectorAll('.page-item');
+    
+    pageItems.forEach(pageItem => {
+        pageItem.addEventListener('click', function() {
+            const pageIframe = this.querySelector('.page-iframe');
+            const projectCard = this.closest('.project-card');
+            const mainIframe = projectCard.querySelector('.project-preview');
+            
+            if (pageIframe && mainIframe) {
+                // Update main preview to show selected page
+                mainIframe.src = pageIframe.src;
+                
+                // Visual feedback - highlight selected page
+                const allPages = projectCard.querySelectorAll('.page-item');
+                allPages.forEach(page => page.classList.remove('active-page'));
+                this.classList.add('active-page');
+                
+                // Scroll to main preview
+                mainIframe.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+                
+                // Add loading animation to main preview
+                const previewIndicator = projectCard.querySelector('.preview-indicator');
+                if (previewIndicator) {
+                    const originalText = previewIndicator.innerHTML;
+                    previewIndicator.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+                    
+                    setTimeout(() => {
+                        previewIndicator.innerHTML = originalText;
+                    }, 2000);
+                }
+            }
+        });
+        
+        // Add hover effect to show page title
+        pageItem.addEventListener('mouseenter', function() {
+            const label = this.querySelector('.page-label');
+            if (label) {
+                label.style.transform = 'scale(1.1)';
+                label.style.fontWeight = '600';
+            }
+        });
+        
+        pageItem.addEventListener('mouseleave', function() {
+            const label = this.querySelector('.page-label');
+            if (label) {
+                label.style.transform = 'scale(1)';
+                label.style.fontWeight = 'normal';
+            }
+        });
+    });
+    
+    // Add loading delay for page iframes
+    const pageIframes = document.querySelectorAll('.page-iframe');
+    pageIframes.forEach((iframe, index) => {
+        // Stagger loading to prevent overwhelming the browser
+        setTimeout(() => {
+            iframe.style.opacity = '1';
+        }, index * 200);
+        
+        iframe.style.opacity = '0.7';
+        iframe.style.transition = 'opacity 0.5s ease';
+    });
 });
