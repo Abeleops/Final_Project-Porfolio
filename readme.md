@@ -8,11 +8,11 @@
     <img src="./assets/img/AbeleOps2.png" alt="AbeleOps Logo" width="130" height="100">
   </a>
 
-  <h3 align="center">Wd-Finals</h3>
+  <h3 align="center">WD-Finals Portfolio</h3>
 </div>
 
 <div align="center">
-  A collection of hero sections demonstrating various web development techniques and One Piece themed designs.
+  A comprehensive portfolio website showcasing web development skills, projects, and professional experience.
   
   <h3 align="center">AbeleOps</h3>
 </div>
@@ -56,14 +56,17 @@
 
 ## Overview
 
-This project showcases a collection of hero sections with One Piece themed designs, demonstrating various web development techniques and CSS animations. Each hero section represents different characters from the One Piece universe with unique styling and interactive elements.
+This project is a comprehensive portfolio website designed to showcase my professional journey, skills, and projects in web development. The portfolio features a modern, responsive design with interactive elements and smooth animations to create an engaging user experience.
 
 ### Key Components
-- **Multiple Hero Sections**: 5 different character-themed hero sections (Luffy, Zoro, Sanji, Nami, Usopp)
-- **Interactive Elements**: Hover effects and character transformations
-- **Responsive Design**: Mobile-friendly layouts
-- **Character Animations**: CSS-based animations for character state changes
-- **Theme Consistency**: Consistent branding and navigation across all sections
+- **Portfolio Homepage**: Clean, modern landing page with hero section and navigation
+- **About Me Section**: Personal background, passion, and professional journey
+- **Education Page**: Academic achievements and educational background
+- **Past Organizations**: Experience with various organizations and collaborations
+- **Projects Showcase**: Display of completed projects and technical work
+- **Tech Stack**: Technologies, tools, and skills demonstration
+- **Responsive Design**: Mobile-friendly layouts across all devices
+- **Interactive Elements**: Hover effects, animations, and smooth transitions
 
 ### Technology
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -83,7 +86,7 @@ This project showcases a collection of hero sections with One Piece themed desig
 7. File Structure to follow below.
 
 ```
-Wd-Finals
+WD-Finals
 └─ assets
 |   └─ css
 |   |   └─ header.css
@@ -140,4 +143,4 @@ Wd-Finals
 
 | Title | Purpose | Link | Grade |
 |-|-|-|-|
-| Final Project | Portfolio Website |https://abeleops.github.io/Final_Project-Porfolio/ | N/A |
+| Final Project | Portfolio Website | https://abeleops.github.io/Final_Project-Porfolio/ | N/A |
