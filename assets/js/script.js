@@ -88,7 +88,7 @@ function typeWriter(element, text, speed = 100) {
 
 // Initialize typing effect when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    const heroTitle = document.querySelector('.hero-text h1');
+    const heroTitle = document.querySelector('.hero-text p');
     if (heroTitle) {
         const originalText = heroTitle.textContent;
         setTimeout(() => {
