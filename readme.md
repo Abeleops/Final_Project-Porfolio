@@ -85,11 +85,59 @@ This project showcases a collection of hero sections with One Piece themed desig
 ```
 Final_Project-Portfolio
 └─ assets
-
+|   └─ css
+|   |   └─ header.css
+|   |   └─ style.css
+|   └─ img
+|   |   └─ AbeleOps.png
+|   |   └─ AbeleOps2.png
+|   |   └─ main_page_pic.jpg
+|   |   └─ nyebe_white.png
+|   └─ js
+|       └─ script.js
+└─ pages
+|  └─ About me
+|     └─ assets
+|     |  └─ css
+|     |  |  └─ style.css
+|     |  └─ js
+|     |     └─ scripts.js
+|     └─ index.html
+|  └─ Education
+|     └─ assets
+|     |  └─ css
+|     |  |  └─ style.css
+|     |  └─ js
+|     |     └─ scripts.js
+|     └─ index.html
+|  └─ Past Orgs
+|     └─ assets
+|     |  └─ css
+|     |  |  └─ style.css
+|     |  └─ js
+|     |     └─ scripts.js
+|     └─ index.html
+|  └─ Projects
+|     └─ assets
+|     |  └─ css
+|     |  |  └─ style.css
+|     |  └─ js
+|     |     └─ scripts.js
+|     └─ index.html
+|  └─ Tech Stack
+|     └─ assets
+|     |  └─ css
+|     |  |  └─ style.css
+|     |  └─ js
+|     |     └─ scripts.js
+|     └─ index.html
+└─ index.html
+└─ LICENSE
+└─ readme.md
 ```
 
 ## Resources
 
 | Title | Purpose | Link | Grade |
 |-|-|-|
-| Final Project | Porfolio |  N/A |
+| Final Project | Porfolio | https://abeleops.github.io/Final_Project-Porfolio/  |  N/A |
