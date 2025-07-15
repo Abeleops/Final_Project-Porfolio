@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (heroTitle) {
         const originalText = heroTitle.textContent;
         setTimeout(() => {
-            typeWriter(heroTitle, originalText, 80);
-        }, 1000);
+            typeWriter(heroTitle, originalText, 40);
+        }, 250);
     }
 });
 
