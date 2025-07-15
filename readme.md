@@ -139,5 +139,5 @@ Final_Project-Portfolio
 ## Resources
 
 | Title | Purpose | Link | Grade |
-|-|-|-|
-| Final Project | Porfolio | https://abeleops.github.io/Final_Project-Porfolio/  |  N/A |
+|-|-|-|-|
+| Final Project | Portfolio Website |https://abeleops.github.io/Final_Project-Porfolio/ | N/A |
