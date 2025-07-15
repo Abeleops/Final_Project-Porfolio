@@ -8,7 +8,7 @@
     <img src="./assets/img/AbeleOps.png" alt="AbeleOps Logo" width="130" height="100">
   </a>
 
-  <h3 align="center">Final_Project-Portfolio</h3>
+  <h3 align="center">Wd-Finals</h3>
 </div>
 
 <div align="center">
@@ -83,7 +83,7 @@ This project showcases a collection of hero sections with One Piece themed desig
 7. File Structure to follow below.
 
 ```
-Final_Project-Portfolio
+Wd-Finals
 └─ assets
 |   └─ css
 |   |   └─ header.css
