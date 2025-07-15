@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Abeleops/">
-    <img src="./assets/img/AbeleOps.png" alt="AbeleOps Logo" width="130" height="100">
+    <img src="./assets/img/AbeleOps2.png" alt="AbeleOps Logo" width="130" height="100">
   </a>
 
   <h3 align="center">Wd-Finals</h3>
