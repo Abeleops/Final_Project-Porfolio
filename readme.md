@@ -143,4 +143,4 @@ WD-Finals
 
 | Title | Purpose | Link | Grade |
 |-|-|-|-|
-| Final Project | Portfolio Website | https://abeleops.github.io/Wd-Finals/ | N/A |
+| Final Project | Portfolio Website | https://abeleops.github.io/Wd-Finals/ | 90 |
